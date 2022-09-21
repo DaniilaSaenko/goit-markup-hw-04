@@ -33,7 +33,6 @@ p {
     margin: 0;
 }
 .section {
-    max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
     padding: 94px 0px;
@@ -47,7 +46,6 @@ p {
     /*border: 0.2px solid black;*/
 }
 .page-header {
-    max-width: 1600px;
     margin: 0;
     margin-left: auto;
     margin-right: auto;
@@ -106,9 +104,17 @@ p {
     letter-spacing: 0.03em;
     color: var(--color-text);
 }
-
+.icon {
+   display: inline-block;
+   margin: 0; 
+ 
+}
+.icon-cont .icon {
+  margin-right: 10px;  
+  fill: currentColor;  
+}
 /* Select */
-.main-nav, .nav-site, .select-nav, .select-contackt, .select-team {
+.main-nav, .nav-site, .select-nav, .select-contackt, .select-team, .select-client {
     display: flex;
     align-items: center;
 }
@@ -116,7 +122,7 @@ p {
 .select-employ{
     display: flex;
 }
-.select-features {
+.select-features, .select-social {
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -132,7 +138,9 @@ p {
     align-items: center;
     margin-bottom: 50px;
 }
-
+.select-social {
+    margin-bottom: 30px;
+}
 .select-contackt {
     margin-left: auto;
 }
@@ -150,7 +158,7 @@ p {
     margin-right: 30px;
 }
 
-.select-team .item:not(:last-child) {
+.select-team .item:not(:last-child), .select-client .item:not(:last-child) {
     margin-right: 30px;
 }
 
@@ -189,6 +197,7 @@ p {
     max-width: 100%;
     height: auto;
     display: block;
+    margin-bottom: 30px;
 }
 
 /* Title */
@@ -204,11 +213,18 @@ p {
 }
 
 .page-team .title,
-.page-employ .title {
+.page-employ .title, .page-client .title {
     text-align: center;
     margin-bottom: 50px;
 }
-
+.footer-social .title {
+    color: var(--color-white);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
 .card-features .title {
     font-size: 14px;
     line-height: 1.14;
@@ -244,7 +260,7 @@ p {
 .card-text {
     display: block;
     margin: 0;
-    padding: 30px 0;
+    margin-bottom: 16px;
 }
 /* Logo */
 .logo-main {
@@ -263,6 +279,7 @@ p {
 .logo-color {
     color: var(--color-accent);
 }
+
 /* Link */
 .link, .link-cont {
     text-decoration: none;
@@ -321,30 +338,12 @@ p {
 .page-team {
      background-color: var(--color-grey); 
 }
-.item .mail::before {
-    content: "";
-    width: 16px;
-    height: 12px;
-    margin-right: 10px;
-    background-image: url('../images/envelope.svg');
-    background-size: contain;
-}
-.item .phone::before {
-    content: "";
-    width: 10px;
-    height: 16px;
-    margin-right: 10px;
-    background-image: url('../images/smartphone.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
+/*
 .card-features::before {
     display: block;
     content: "";
     height: 120px;
     margin-bottom: 30px;
-/*    background-size: contain; */
     background-repeat: no-repeat;
     background-position: center;
     background-color: #F5F4FA;
@@ -362,9 +361,41 @@ p {
 .icon-astronaut::before {
     background-image: url('../images/astronaut.svg');
 }
+*/
+.icon-cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon-features {
+    display: flex;
+    height: 120px;
+    margin-bottom: 30px;
+    background-color: #F5F4FA;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+}
+.icon-client {
+    display: flex;
+    width: 170px;
+    height: 92px;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+}
+.icon-social {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    border: 1px solid #AFB1B8;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}
 /* Footer */
 .page-footer {
-    max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
     background-color: var(--color-footer);
@@ -393,16 +424,19 @@ p {
     color: var(--color-rgba);
     font-style: normal;
 }
-.address-footer, .link-footer{
+.address-footer, .link-footer, .footer-social{
     display: inline-block;
     margin: 0;
     text-decoration: none;
     }
 .footer-contackt {
     display: block;
-}    
+}
 .footer-contackt .item:not(:last-child) {
     margin-bottom: 9px;
+}
+.select-social .item:not(:last-child) {
+    margin-right: 10px;
 }
 .link-footer:hover, .link-footer:focus 
 {
