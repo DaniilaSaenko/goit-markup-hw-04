@@ -33,6 +33,7 @@ button {
 p {
     margin: 0;
 }
+
 .section {
     margin-left: auto;
     margin-right: auto;
@@ -79,7 +80,7 @@ p {
 }
 .page-footer{
     padding: 60px 0px;
-    align-items:flex-start;
+    
 }
 .poster {
     width: 696px;
@@ -111,10 +112,8 @@ p {
    margin: 0; 
  
 }
-.link-cont .icon {
+.link .icon {
   margin-right: 10px;
-  fill: var(--color-icon);
-
 }
 /* Select */
 .main-nav, .nav-site, .select-nav, .select-contackt, .select-team, .select-client {
@@ -149,7 +148,7 @@ p {
 }
 
 .select-contackt {
-    margin-left: auto;
+  margin-left: auto;
 }
 .select-nav .link, .select-contackt .link-cont{
     padding-top: 32px;
@@ -294,26 +293,18 @@ p {
 
 /* Link */
 .link {
+    display: flex;
     text-decoration: none;
     color:var(--color-title);
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
+    fill: currentColor
 }
-.link-cont {
-    text-decoration: none;
-        color: var(--color-title);
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 1.14;
-        letter-spacing: 0.02em;
-    fill: var(--color-text);
-}
-.link-cont:hover,
-.link-cont:focus {
-    color: var(--color-accent);
-    fill: var(--color-accent);
+ 
+.select-contackt .link {
+    color: var(--color-icon);    
 }
 .link:hover, .link:focus {
     color: var(--color-accent);
@@ -419,11 +410,7 @@ p {
     background-image: url('../images/astronaut.svg');
 }
 */
-.icon-cont {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+
 .icon-features {
     display: flex;
     height: 120px;
@@ -444,7 +431,6 @@ p {
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
-    
 }
 .logo-footer {
     display: block;
@@ -482,7 +468,7 @@ p {
 }
 
 .footer-contackt {
-    display: block;
+    display: inline-block;
 }
 .footer-contackt .item:not(:last-child) {
     margin-bottom: 9px;
