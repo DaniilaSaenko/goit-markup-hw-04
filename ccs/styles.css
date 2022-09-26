@@ -432,6 +432,10 @@ p {
     line-height: 1.71;
     letter-spacing: 0.03em;
 }
+.page-footer .container {
+   display: flex;    
+   align-items: flex-start;
+}
 .logo-footer {
     display: block;
     text-decoration: none;
@@ -455,16 +459,17 @@ p {
     margin: 0;
     text-decoration: none;
     }
-.section-one {
+.footer-one {
     display: inline-block;
-    width: 231px;
-    border: 1px solid #AFB1B8;
+/*    width: 231px;
+    border: 1px solid #AFB1B8; */
 }
 .footer-social {
     display: inline-block;
     width: 206px;
+    margin-top: 12px;
     margin-left: 70px;
-    border: 1px solid #AFB1B8;
+/*    border: 1px solid #AFB1B8; */
 }
 
 .footer-contackt {
